@@ -1,0 +1,214 @@
+:root {
+    --shape: #555;
+
+    --shape-active: red;
+
+    --shape-focus: rgba(253, 49, 49, 0.5)
+}
+
+.shape {
+    margin: auto;
+    cursor: pointer;
+}
+
+.shape:not(.disabled) {
+    cursor: pointer;
+}
+
+.shape.disabled {
+    cursor: default;
+}
+
+.shape:not(.triangle) {
+    width: 50px;
+    height: 50px;
+}
+
+.square {
+    background-color: var(--shape);
+}
+
+.square.active,
+.square:hover:not(.disabled) {
+    background-color: var(--shape-active);
+}
+
+.square:focus:not(.disabled) {
+    background-color: var(--shape-focus);
+}
+
+.triangle {
+    width: 0;
+    height: 0;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid var(--shape);
+}
+
+.triangle.active,
+.triangle:hover:not(.disabled) {
+    border-bottom: 50px solid var(--shape-active);
+}
+
+.triangle:focus:not(.disabled) {
+    border-bottom: 50px solid var(--shape-focus);
+}
+
+.circle {
+    background-color: var(--shape);
+    border-radius: 50%;
+}
+
+.circle.active,
+.circle:hover:not(.disabled) {
+    background-color: var(--shape-active);
+}
+
+.circle:focus:not(.disabled) {
+    background-color: var(--shape-focus);
+}
+
+.trapezoid {
+    border-bottom: 50px solid var(--shape);
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    height: 0;
+    margin-top: -40px;
+}
+
+.trapezoid.active,
+.trapezoid:hover:not(.disabled) {
+    border-bottom: 50px solid var(--shape-active);
+}
+
+.trapezoid:focus:not(.disabled) {
+    border-bottom: 50px solid var(--shape-focus);
+}
+
+.pentagon {
+    position: relative;
+    width: 54px !important;
+    box-sizing: content-box;
+    border-width: 50px 18px 0;
+    border-style: solid;
+    border-color: var(--shape) transparent;
+    margin-top: 50px;
+}
+
+.pentagon:before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 0;
+    top: -85px;
+    left: -18px;
+    border-width: 0 45px 35px;
+    border-style: solid;
+    border-color: transparent transparent var(--shape);
+}
+
+.pentagon.active,
+.pentagon:hover:not(.disabled) {
+    border-color: var(--shape-active) transparent;
+}
+
+.pentagon.active:before,
+.pentagon:hover:not(.disabled):before {
+    border-color: transparent transparent var(--shape-active);
+}
+
+.pentagon:focus:not(.disabled) {
+    border-color: var(--shape-focus) transparent;
+}
+
+.pentagon:focus:not(.disabled):before {
+    border-color: transparent transparent var(--shape-focus);
+}
+
+.cylinder {
+    position: relative;
+    width: 100px;
+    height: 50px;
+    background-color: var(--shape);
+    border-radius: 50vw / 25vw;
+}
+
+.cylinder.active,
+.cylinder:hover:not(.disabled) {
+    background-color: var(--shape-active);
+}
+
+.cylinder:focus:not(.disabled) {
+    background-color: var(--shape-focus);
+}
+
+.rectangle {
+    position: relative;
+    width: 75px !important;
+    background-color: var(--shape);
+}
+
+.rectangle.active,
+.rectangle:hover:not(.disabled) {
+    background-color: var(--shape-active);
+}
+
+.rectangle:focus:not(.disabled) {
+    background-color: var(--shape-focus);
+}
+
+.star {
+    width: 0 !important;
+    height: 0 !important;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 50px solid var(--shape);
+    position: relative;
+}
+
+
+.star:after {
+    width: 0 !important;
+    height: 0 !important;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-top: 50px solid var(--shape);
+    position: absolute;
+    content: "";
+    top: 15px !important;
+    left: -25px !important;
+}
+
+.star.active,
+.star:hover:not(.disabled) {
+    border-bottom: 50px solid var(--shape-active);
+}
+
+.star.active:after,
+.star:hover:not(.disabled):after {
+    border-top: 50px solid var(--shape-active);
+}
+
+.star:focus:not(.disabled) {
+    border-bottom: 50px solid var(--shape-focus);
+}
+
+.star:focus:not(.disabled):after {
+    border-top: 50px solid var(--shape-focus);
+}
+
+.parallelogram {
+    width: 75px !important;
+    height: 50px !important;
+    transform: skew(20deg);
+    background-color: var(--shape);
+}
+
+.parallelogram.active,
+.parallelogram:hover:not(.disabled) {
+    background-color: var(--shape-active);
+}
+
+.parallelogram:focus:not(.disabled) {
+    background-color: var(--shape-focus);
+}

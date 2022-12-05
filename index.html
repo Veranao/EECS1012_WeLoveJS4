@@ -1,0 +1,128 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="common.css" title="style" />
+    <link rel="stylesheet" href="index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+
+    <title>Random Shape Memory Game Extravaganza</title>
+
+</head>
+
+<body>
+    <header>
+        <h1> Random Shape Memory Game Extravaganza </h1>
+    </header>
+
+    <section class='centeredRows'>
+        <div class='mainButtons'>
+            <div class="firstFlex">
+                <button onclick="initGame()"> Start </button>
+
+                <p class="switchTitle"> Normal </p>
+
+                <label class="difficultySwitch">
+                    <input id="difficultySwitch" type="checkbox">
+                    <span class="slider round"></span>
+                </label>
+
+                <p class="switchTitle"> Hard </p>
+            </div>
+
+
+            <button onclick="initTutorial()"> Tutorial </button>
+
+            <button onclick="initModal('scoreModal')"> Hi-Score </button>
+
+            <button onclick="initModal('storeModal')"> Store </button>
+
+            <button onclick="initExit()"> Exit </button>
+        </div>
+    </section>
+
+    <footer>
+        <div class="totalPoints">
+            <span style="background-color: white;"> Wallet: <span id="wallet" class="counter" style="margin-left: 10px;"></span></span>
+        </div>
+
+        <div class='authorInformation'>Trademark of @weLoveJS, Author: Victor Cao</div>
+    </footer>
+
+    <!-- Modals -->
+
+    <div id="startModal" class="modal">
+        <div class='modal-content'>
+            <div>
+                <h3>Welcome to Random Shape Extravanganza!</h3>
+                <p>Please enter your name to start</p>
+                <div class="group">
+                    <input id="name" />
+                    <button id="go" class="btn-primary">Go</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="scoreModal" class="modal">
+        <div class='modal-content'>
+            <span class="close">&times;</span>
+            <div id="scores" class="myScores">
+                <p class="titleModals"> Random Shape Extravaganza Leaderboards </p>
+                <div id="score">
+                    <p> 1) 103.................... Viktor of Zaun</p>
+                    <p> 2) 101.................... Michelle Jones</p>
+                    <p> 3) 81.................... Miodrag</p>
+                    <p> 4) 56.................... Bruce Wayne</p>
+                    <p> 5) 36.................... Albert Einstein</p>
+                    <p> 6) 24.................... Clark Kent</p>
+                    <p> 7) 16.................... Lebron James</p>
+                    <p> 8) 12.................... Alexander the Great</p>
+                    <p> 9) 10.................... Peppa Pig </p>
+                    <p> 10) 8.................... Brad Pitt </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="storeModal" class="modal">
+        <div class='modal-content'>
+            <span class="close">&times;</span>
+            <div id="storeItems" class="myStore">
+                <p class='titleModals'> Random Shape Extravaganza Store </p>
+                <input type="radio" id="bricks" name="backgroundImage" value="bricks" class="backgroundImage"
+                    data-cost="0">
+                <label for="bricks"> Default (FREE!) </label>
+                <input type="radio" id="desert" name="backgroundImage" value="desert" class="backgroundImage"
+                    data-cost="5">
+                <label for="desert"> Scorching Sahara 5 <img id="coin" class="coin" src="images/coin.png" width="30"
+                        height="30" /></label>
+                <input type="radio" id="plains" name="backgroundImage" value="plains" class="backgroundImage"
+                    data-cost="60">
+                <label for="plains"> Pleasant Plains 60 <img id="coin" class="coin" src="images/coin.png" width="30"
+                        height="30" /></label>
+                <input type="radio" id="city" name="backgroundImage" value="city" class="backgroundImage"
+                    data-cost="120">
+                <label for="city"> Bustling City Center 120 <img id="coin" class="coin" src="images/coin.png" width="30"
+                        height="30" /> </label>
+
+                <hr>
+
+                <input type="radio" id="extraLife" name="extras" value="extraLife" class="extras" data-cost="100">
+                <label for="extraLife"> Extra Life 100 <img id="life" class="life" src="images/life.png" width="30"
+                        height="30" /></label>
+                <input type="radio" id="hint" name="extras" value="hint" class="extras" data-cost="20">
+                <label for="hint"> Extra Hint 20 <img id="question" class="question" src="images/question.png"
+                        width="30" height="30" /> </label>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,250 @@
+body {
+  background-color: ivory;
+  background-repeat: no-repeat;
+  opacity: 85%;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-style: underline;
+  font-size: 3vw;
+  font-family: "Comic Sans MS";
+  letter-spacing: 0.25vw;
+  margin-bottom: 20px;
+  color: black;
+  animation: text 2.5s 500;
+
+}
+
+.switchTitle {
+  font-weight: bold;
+  font-family: "Comic Sans MS";
+  font-size: 18px;
+}
+
+@keyframes text {
+  0% {
+    color: lightblue;
+  }
+
+  30% {
+    letter-spacing: 0.5vw;
+    color: lightcoral;
+
+  }
+
+  50% {
+    letter-spacing: 0.5vw;
+    color: lightyellow;
+  }
+
+  85% {
+    letter-spacing: 0.75vw;
+    color: lightgreen;
+
+  }
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  box-sizing: border-box;
+  z-index: 2;
+}
+
+.authorInformation {
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.centeredRows {
+  display: flex;
+  justify-content: center;
+}
+
+.mainButtons {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 3;
+}
+
+.mainButtons button {
+  height: 8vh;
+  width: 275px;
+  color: black;
+  background-color: lightcyan;
+  margin: 3vh;
+  border-color: lightblue;
+  font-family: "Comic Sans MS";
+  font-size: 19px;
+}
+
+.mainButtons button:hover {
+  background-color: lightcoral;
+  color: lightcyan;
+}
+
+.difficultySwitch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.difficultySwitch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked+.slider {
+  background-color: #2196F3;
+}
+
+input:focus+.slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.firstFlex {
+  display: flex;
+  align-items: center;
+}
+
+.firstFlex p {
+  margin: 10px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 5;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: lightskyblue;
+  margin: auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  /* Could be more or less, depending on screen size */
+  border-radius: 5px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.titleModals {
+  font-weight: bold;
+  font-size: 55px;
+}
+
+.myScores {
+  font-family: "Comic Sans MS";
+  font-size: 25px;
+  background-image: url('images/hiScore.png');
+}
+
+.myStore {
+  font-family: "Comic Sans MS";
+  font-size: 35px;
+  font-weight: bold;
+  background-image: url('images/store.png');
+  background-size: cover;
+}
+
+.totalPoints {
+  font-weight: bold;
+  font-family: "Comis Sans MS";
+  font-size: 30px;
+  margin-left: 20px;
+}
+
+.counter {
+  background-color: white;
+}
+
+/*margin: 0;
+ position: absolute;
+ top: 50%;
+ bottom: 50%;
+ left: 50%;
+ -ms-transform: translate (-50% -50%);
+ transform: translate(-50%, -50%);*/
